@@ -1,0 +1,48 @@
+<!-- Product Detail -->
+<div class="row">
+	
+	<div class="span12">
+	
+		<h1><img src="assets/img/tri-left.svg" id='icon-img' ng-click="doTheBack()">{{product.name}}</h1>
+	
+	</div>
+	
+</div>
+<div class="row">
+
+	<div class="span8">
+	
+		<img class="product-image" ng-src={{mainImageUrl}} alt="{{product.name}}" />
+		
+		<div class="row">
+		
+			<div class="span2" ng-repeat="img in product.images">
+				<img class="product-thumb" ng-src={{img}} alt="{{product.name}}" ng-click="setImage(img)"/>
+			</div>
+		
+		</div>
+		
+	</div>
+	
+	<div class="span4">
+	
+		<div class="add-basket-box clearfix">
+			
+			<img ng-src={{product.imgSrc}} alt="{{product.name}}" />
+			
+			<p>{{product.name}}<br /><span>&dollar;{{product.price}}</span></p>
+			
+			<a class="btn btn-addcart btn-primary" ng-click="addCart(product)"><span class="entypo cart"></span></a>
+		
+		</div>
+		
+		<p>{{product.description}}</p>
+		
+		<h3>Stock</h3>
+		
+		<p>This item has {{product.stock}} in stock and ready to ship!</p>
+
+	</div>
+
+</div>
+	

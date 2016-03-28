@@ -1,0 +1,40 @@
+<div class="row">
+	
+	<div class="span12">
+	
+		<ul class="main-nav clearfix">
+		
+			<li class="active"><a ng-click="categorySelect()">New</a></li>
+			<li ng-repeat="item in data.products | orderBy: 'category' | uniqueCat:'category'" ng-click="categorySelect(item)"><a>{{item}}</a></li>
+
+		</ul>
+	
+	</div>
+	
+</div>
+<div class="row">
+	
+	<div class="span12">
+	
+		<h1>New Products</h1>
+	
+	</div>
+	
+</div>
+
+<div class="row">
+	
+	<div ng-repeat="item in data.products | filter: categoryFilter" class="span4 product-listing">
+	
+		<p class="title"><a href="#/product/{{item.objectId}}">{{item.name}}</a></p>
+		
+		<a href="#/product/{{item.objectId}}"><img class="image" ng-src={{item.imgSrc}} alt="Ibiza Lips" /></a>
+		
+		<p class="price">
+			&dollar;{{item.price}}
+			<a class="btn btn-addcart btn-primary" ng-click="addCart(item)"><span class="entypo cart"></span></a><a class="btn btn-view btn-grey" href="#/product/{{item.objectId}}"><span class="entypo search"></span></a>
+		</p>
+		
+	</div>
+	
+</div>

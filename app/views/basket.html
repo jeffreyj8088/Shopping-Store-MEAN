@@ -1,0 +1,53 @@
+
+<div class="row">
+	
+	<div class="span12">
+	
+		<h1><img src="assets/img/tri-left.svg" id='icon-img' ng-click="doTheBack()">Your Basket</h1>
+	
+	</div>
+	
+</div>
+
+<!-- Basket -->
+
+<div class="row">
+	<div class="span12">
+		
+		<table class="basket-table">
+			<thead>
+				<tr>
+					<th colspan="2">Item</th>
+					<th>Qty</th>
+					<th>Price</th>
+					<th colspan="2">Total</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="product in cartDetails" >
+					<td class="image"><a href="#/product/{{product.id}}"><img ng-src={{product.imgSrc}} alt={{product.name}} /></a></td>
+					<td class="title"><a href="#/product/{{product.id}}">{{product.name}}</a></td>
+					<td class="qty"><input type="number" name="qty[]" min="1" max="20" ng-model="product.total" ng-change="updateItems(product)"/></td>
+					<td class="price">&dollar;{{product.price}}</td>
+					<td class="total">&dollar;{{product.price*product.total | number:2}}</td>
+					<td class="remove"><a ng-click="deleteCart(product)"><span class="entypo trash"></span></a></td>
+				</tr>
+			</tbody>
+		</table>
+		
+		<div class="clearfix">
+		
+		<p class="basket-total"><span>Total:</span> &dollar;{{cartPrice() | number:2}}</p>
+		
+		</div>
+		
+		<p class="actions">
+			<a class="btn btn-blank" href="#/products">Continue Shopping</a>
+			<a class="btn btn-blank" ng-click="emptyCart()">Empty Basket</a>
+			<a class="btn btn-primary" href="#/checkout">Continue to Checkout</a>
+		</p>
+		
+	</div>
+
+</div>
+		

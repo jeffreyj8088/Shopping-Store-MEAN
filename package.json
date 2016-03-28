@@ -1,0 +1,10 @@
+{
+  "name": "Shop Mall",
+  "version": "0.0.0",
+  "description": "Simple shop mall application.",
+  "main": "server.js",
+  "author": "Jeff",
+  "dependencies": {
+    "express": "~4.7.2"
+  }
+}

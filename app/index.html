@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="Store">
+	<head>
+	
+		<title>Store</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="UTF-8" />
+		
+		<!-- Bootstrap -->
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet" media="screen" />
+		
+		<!-- Fonts -->
+		<link href="http://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet" type="text/css" />
+		<link href="assets/css/entypo.css" rel="stylesheet" type="text/css" />
+		
+		<!-- Template CSS -->
+		<link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+				
+	</head>
+	<body ng-controller="storeCtrl">
+		
+		<div class="container">
+			
+			<div ng-include="'views/header.html'" /></div>
+
+			<div ng-view></div>
+			
+			<div ng-include="'views/footer.html'" /></div>
+			
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="assets/js/bootstrap.min.js"></script>
+		<script src="assets/js/angular.js"></script>
+		<script src="ngmodules/angular-route.js"></script>
+		<script src="ngmodules/ngStorage.min.js"></script>
+		<script src="app.js"></script>		
+		<script src="controllers/storeCtrl.js"></script>
+		<script src="controllers/checkoutCtrl.js"></script>
+		<script src="controllers/basketCtrl.js"></script>
+		<script src="controllers/productCtrl.js"></script>
+		<script src="controllers/productListCtrl.js"></script>
+		<script src="filters/filters.js"></script>
+		<script src="model/productsFactory.js"></script>
+	</body>
+
+</html>

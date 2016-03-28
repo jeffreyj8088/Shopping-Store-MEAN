@@ -1,0 +1,100 @@
+<div class="row shift-top">
+		
+		<div class="span12">
+			
+			<div class="checkout-box checkout-box-long">
+			
+				<h2>Delivery Information</h2>
+				
+				<form name="shippingForm" novalidate>
+									
+					<p>
+						<label for="field-fname">First Name <span class="mand">*</span></label>
+						<input type="text" id="field-fname" name="field-fname" 
+								ng-model="shipData.fname" required />
+						<span class="error" ng-show="shippingForm.field-fname.$error.required">
+			                Please enter a First Name!
+			            </span>
+					</p>
+				
+					<p>
+						<label for="field-lname">Last Name <span class="mand">*</span></label>
+						<input type="text" id="field-lname" name="field-lname" 
+								ng-model="shipData.lname" required />
+						<span class="error" ng-show="shippingForm.field-lname.$error.required">
+			                Please enter a Last Name!
+			            </span>
+					</p>
+				
+					<p>
+						<label for="field-add1">Address Line 1 <span class="mand">*</span></label>
+						<input type="text" id="field-add1" name="field-addr1" 
+								ng-model="shipData.addr1" required />
+						<span class="error" ng-show="shippingForm.field-addr1.$error.required">
+			                Please enter an Address!
+			            </span>
+					</p>
+				
+					<p>
+						<label for="field-add2">Address Line 2</label>
+						<input type="text" id="field-add2" name="field-add2" ng-model="shipData.addr2" />
+					</p>
+				
+					<p>
+						<label for="field-city">City <span class="mand">*</span></label>
+						<input type="text" id="field-city" name="field-city" 
+								ng-model="shipData.city" required />
+						<span class="error" ng-show="shippingForm.field-city.$error.required">
+			                Please enter a City!
+			            </span>
+					</p>
+				
+					<p>
+						<label for="field-county">State <span class="mand">*</span></label>
+						<input type="text" id="field-county" name="field-state" 
+								ng-model="shipData.state" required />
+						<span class="error" ng-show="shippingForm.field-state.$error.required">
+			                Please enter a State!
+			            </span>
+					</p>
+				
+					<p>
+						<label for="field-postcode">Zipcode <span class="mand">*</span></label>
+						<input type="text" id="field-postcode" name="field-postcode" 
+								ng-model="shipData.zipcode" required />
+						<span class="error" ng-show="shippingForm.field-state.$error.required">
+			                Please enter a Zipcode!
+			            </span>
+					</p>
+				
+					<p>
+						<label for="field-country">Country <span class="mand">*</span></label>
+						<select id="field-country" name="field-country" ng-model="shipData.country">
+							<option value="US" ng-selected="true">United State</option>
+							<option value="CAN">Canada</option>
+						</select>
+					</p>
+				
+					<p>
+						<label for="field-phone">Phone Number <span class="mand">*</span></label>
+						<input type="text" id="field-phone" name="field-phone" 
+								ng-model="shipData.phone" required />
+						<span class="error" ng-show="shippingForm.field-phone.$error.required">
+			                Please enter a Zipcode!
+			            </span>
+					</p>
+				
+					<p class="buttons">
+						<button ng-disabled="shippingForm.$invalid" 
+								ng-click="checkoutOrder(shipData)" 
+						        class="btn btn-primary" >Continue</button>
+					</p>
+				
+				</form>
+				
+			</div>
+			
+		</div>
+	
+</div>
+	
